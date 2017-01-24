@@ -10,15 +10,21 @@ namespace Teht09
     {
         static void Main(string[] args)
         {
-            int number;
+            int sum = 0, number;
 
-            do
+            do // ask numbers
             {
-                Console.WriteLine("Give a number < ");
-                number = int.Parse(Console.ReadLine());
+                Console.Write("Give a number: (0 ends and gives sum)"); 
 
-            } while (number != 0);
+                number = int.Parse(Console.ReadLine());
+                sum += number; // add given number to sum
+                
+            } while (number != 0); // stop if 0 is given
+
+            Console.WriteLine("Total: " + sum); // show sum of given numbers
 
         }
+
     }
-}
+    }
+
